@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<name>Complete Reference Java</name>
+		<author>Nishanth</author>
+		<price>5678</price>
+	</book>
+	<book>
+		<name>Complete Reference SQL</name>
+		<author>Naresh</author>
+		<price>4678</price>
+	</book>
+	<book>
+		<name>Complete Reference JDBC</name>
+		<author>Sangeetha</author>
+		<price>6678</price>
+	</book>
+
+</books>

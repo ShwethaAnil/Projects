@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+	<employee>
+		<empid>101</empid>
+		<ename>swathi</ename>
+		<salary>450000</salary>
+	</employee>
+	<employee>
+		<empid>102</empid>
+		<ename>vamshi</ename>
+		<age>35</age>
+		<salary>550000</salary>
+	</employee>
+	<employee>
+		<empid>103</empid>
+		<ename>swathi</ename>
+		<salary>450000</salary>
+	
+	</employee>
+	<employee>
+		<empid>104</empid>
+		<ename>swathi</ename>
+		<salary>450000</salary>
+	</employee>
+</employees>
