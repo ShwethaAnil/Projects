@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+var request;
+function sendInfo(){
+	var pid=document.myform.p1.value;
+	var url="players.jsp?p1="+pid;
+	if(window.XMLHttpRequest){
+		request=new XMLHttpRequest();
+	}else if(window.ActiveXObject){
+		request=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	try{
+		request.onreadystatechange=getInfo;
+		request.open("GET",url,true);
+		request.send();
+	}catch(e){alert("unable to connect")}
+	
+	function getInfo(){
+		if(request.readyState==4){
+		var data=request.responseText;
+		document.getElementById("player").innerHTML=data;
+		}
+	}
+}
+
+</script>
+<body>
+<form name="myform" >
+Enter Player Id:
+<input type="text" name="p1" onkeyup="sendInfo()">
+</form>
+<br/><br/>
+<span id="player"></span>
+</body>
+</html>
