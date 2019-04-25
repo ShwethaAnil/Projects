@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+		 
+		 <bean id="a1" class="com.mphasis.training.pojos.Address" >
+		<property name="dorno" value="123"></property>
+		<property name="street" value="Manjuntha Nagar"></property>
+		<property name="city" value="banaglore"></property>
+		<property name="state" value="KA"></property>
+		<property name="pincode" value="560010"></property>
+	</bean>
+	
+	<bean id="a2" class="com.mphasis.training.pojos.Address" >
+		<property name="dorno" value="1234"></property>
+		<property name="street" value="RR Nagar"></property>
+		<property name="city" value="banaglore"></property>
+		<property name="state" value="KA"></property>
+		<property name="pincode" value="560010"></property>
+	</bean>
+		 <bean id="e1" class="com.mphasis.training.pojos.Employee">
+		 	<property name="empid" value="7899"></property>
+		<property name="ename" value="Shwetha"></property>
+		<property name="salary" value="44554456"></property>
+		<property name="hiredate" value="12-12-12"></property>
+		<property name="address">
+		<list>
+			<ref bean="a1"/>
+			<ref bean="a2"/>
+		</list>
+		</property>
+		 </bean>
+		 
+		 
+<bean id="answer1" class="com.mphasis.training.pojos.Answer">  
+<property name="id" value="1"></property>  
+<property name="answer" value="Java is a Programming Language"></property>  
+</bean>  
+<bean id="answer2" class="com.mphasis.training.pojos.Answer">  
+<property name="id" value="2"></property>  
+<property name="answer" value="Java is a Platform"></property>  
+</bean>  
+  
+<bean id="user1" class="com.mphasis.training.pojos.User">  
+<property name="id" value="1"></property>  
+<property name="name" value="Arun Kumar"></property>  
+<property name="email" value="arun@gmail.com"></property>  
+</bean>  
+<bean id="user2" class="com.mphasis.training.pojos.User">  
+<property name="id" value="2"></property>  
+<property name="name" value="Varun Kumar"></property>  
+<property name="email" value="Varun@gmail.com"></property>  
+</bean>  
+  
+<bean id="que" class="com.mphasis.training.pojos.Question">  
+<property name="id" value="1"></property>  
+<property name="name" value="What is Java?"></property>  
+<property name="answers">  
+<map>  
+<entry key-ref="answer1" value-ref="user1"></entry>  
+<entry key-ref="answer2" value-ref="user2"></entry>  
+</map>  
+</property>  
+</bean>  
+		 
+		 
+		 
+		 
+		 
+
+	<!-- <bean id="a1" class="com.mphasis.training.pojos.Address" >
+		<property name="dorno" value="123"></property>
+		<property name="street" value="Manjuntha Nagar"></property>
+		<property name="city" value="banaglore"></property>
+		<property name="state" value="KA"></property>
+		<property name="pincode" value="560010"></property>
+	</bean> -->
+	
+	<!-- <bean id="e1" class="com.mphasis.training.pojos.Employee" lazy-init="true">
+		<property name="empid" value="7899"></property>
+		<property name="ename" value="Shwetha"></property>
+		<property name="salary" value="44554456"></property>
+		<property name="hiredate" value="12-12-12"></property>
+		<property name="address" ref="a1"></property>
+	</bean>
+	
+	<bean id="e2" class="com.mphasis.training.pojos.Employee">
+		<constructor-arg name="empid" value="6789"  type="int"></constructor-arg>
+		<constructor-arg name="hiredate" value="12-11-11" type="String"></constructor-arg>
+		<constructor-arg name="salary" value="5456465"></constructor-arg>
+		<constructor-arg name="ename" value="Manish"></constructor-arg>
+		<constructor-arg ref="a1"></constructor-arg>
+	</bean> -->
+</beans>
