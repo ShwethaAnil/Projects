@@ -2,14 +2,23 @@ package com.mphasis.training.pojos;
 
 import java.util.List;
 
-public class Employee {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Employee {//implements InitializingBean,DisposableBean {
 	private int empid;
 	private String ename;
 	private double salary;
 	private String hiredate;
 	private List<Address> address;
 	
+	public void init() {
+		System.out.println("initializing");
+	}
 	
+	public void clean() {
+		System.out.println("destroy method");
+	}
 	
 	
 
@@ -53,6 +62,16 @@ public class Employee {
 		return "Employee [empid=" + empid + ", ename=" + ename + ", salary=" + salary + ", hiredate=" + hiredate
 				+ ", address=" + address + "]";
 	}
+
+	/*public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}*/
 	
 
 }
